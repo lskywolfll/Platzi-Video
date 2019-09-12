@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrousel 1</title>
+</head>
+<style>
+    .body{
+        margin: 0px;
+    }
+
+    .carousel{
+        width: 100%;
+        overflow: scroll;
+        padding: 30px;
+        position: relative;
+    }
+
+    .carousel__container{
+        white-space: nowrap;
+        margin: 70px 0px;
+        padding-bottom: 10px;
+    }
+
+    .carousel__item{
+        background-color: blue;
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-right: 10px;
+        display: inline-block;
+        /* pointer para que aparesca una manito que pasara algo cuando haga click */
+        cursor: pointer;
+        /* un tiempo establecido y cuantos elementos queremos que lo tengan para la hora de estar sobre el area indicada */
+        transition: 250ms all;
+        /* para que no sea demaciado grande y empieze desde la izquieda en adelante para transofrmarlos */
+        transform-origin: center left;
+    }
+
+    .carousel__item:hover ~ .carousel__item{
+        transform: translate3d(100px, 0, 0);
+    }
+
+    .carousel__container:hover .carousel__item{
+        opacity: 0.3;
+    }
+
+    .carousel__container:hover .carousel__item:hover{
+        /* aumenta el tamaño, las imagenes por lo general estan en 1 y la aumentamos un 50% */
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+    ::-webkit-scrollbar{
+        display: none;
+    }
+</style>
+<body>
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carousel__item">
+            </div>
+            <div class="carousel__item">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

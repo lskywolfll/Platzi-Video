@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <title>Header</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        background-color: #8F57FD;
+        font-family: 'Muli', sans-serif;
+    }
+
+    .header{
+        width: 100%;
+        height: 80px;
+        /* Colores que me gustaron: 
+        5E1DFC - morado con azul
+        E4572E - Naranjito
+        2C363F - Negrito 
+        4F517D - morado oscuro
+        */
+        background-color: #8F57FD;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* hijo de header, osea esta dentro del header una etiqueta img */
+    .header__img{
+        width: 200px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .header__menu{
+        margin-right: 30px;
+    }
+
+    .header__menu ul{
+        display: none;
+        list-style: none;
+        padding: 0px;
+        position: absolute;
+        width: 100px;
+        text-align: right;
+        margin: 0px 0px 0px -14px;
+    }
+
+    .header__menu:hover ul, ul:hover{
+        display: block;
+    }
+
+    .header__menu li{
+        margin: 10px 0px;
+    }
+
+    .header__menu li a{
+        color: white;
+        text-decoration: none;
+    }
+
+    .header__menu li a:hover{
+        text-decoration: underline;
+    }
+
+    .header__menu--profile{
+        margin-right: 8px;
+        display: flex;
+        align-items: center;
+    }
+
+    .header__menu--profile img{
+        margin-right: 8px;
+        width: 70px;
+    }
+
+    .header__menu--profile p{
+        margin: 0px;
+        color: white; 
+    }
+
+    .navegacion{
+        height: 300px;
+    }
+
+    .navegacion__title{
+        color: white;
+        font-size: 25px;
+    }
+
+    .input{
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 2px solid white;
+        border-radius: 30px;
+        color: white;
+        font-family: 'Muli', sans-serif;
+        font-size: 16px;
+        height: 35px;
+        padding: 0px 20px;
+        width: 70%;
+    }
+
+    .input:focus{
+        outline: none;
+    }
+
+    ::placeholder{
+        color: white;
+    }
+</style>
+<body>
+    <header class="header">
+        <img class="header__img" src="logo-platzi-video-BW2.png" alt="Logo de video con platzi">
+        <div class="header__menu">
+            <div class="header__menu--profile">
+                <img src="perfil.png" alt="user">
+                <p>Perfil</p>
+            </div>
+            <ul>
+                <li><a href="/">Cuenta</a></li>
+                <li><a href="/">Cerrar Sesíon</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="navegacion">
+        <h2 class="navegacion__title">¿Qué quieres ver hoy?</h2>
+        <input type="text" name="buscador" id="buscador" placeholder="Buscar..." class="input">
+    </section>
+</body>
+</html>
