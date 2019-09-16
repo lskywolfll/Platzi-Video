@@ -19,7 +19,7 @@ body{
   width: 200px;
 }
 
-.login{
+.registro{
     background: linear-gradient(#21C08B, #AB88FF);
     display: flex;
     align-items: center;
@@ -30,12 +30,13 @@ body{
     min-height: calc(100vh - 200px);
 }
 
-.login__container {
+.registro__container {
   background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid white;
   border-radius: 40px;
   color: white;
   padding: 60px 68px 40px;
+  /* Tamaño completo del recuadro donde se iniciara sesion */
   min-height: 700px;
   width: 300px;
   display: flex;
@@ -43,53 +44,26 @@ body{
   flex-direction: column;
 }
 
-.login__container--form{
+.registro__container--form{
     display: flex;
     flex-direction: column;
 }
 
-.login__container--form label{
+.registro__container--form label{
     font-size: 14px;
 }
 
-.login__container--rember-pass{
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+.registro__container--login {
+  font-size: 17px;
 }
-
-.login__container--remember-pass a{
-    color: white;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-.login__container--remember-pass a:hover{
-    text-decoration: underline;
-}
-/* > tomar o dar a el diseño en este ejemplo atodos los divs que esten en la seccion de social media */
-.login__container--social-media > div{
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.login__container--social-media > div > img {
-  width: 30px;
-  margin-right: 10px;
-}
-.login__container--register {
-  font-size: 14px;  
-}
-.login__container--register a {
+.registro__container--login a {
   color: white;
   font-weight: bold;
   font-size: 16px;  
   text-decoration: none;
+  margin-left: 15px;
 }
-.login__container--register a:hover {
+.registro__container--login a:hover {
   text-decoration: underline;
 }
 .input {
@@ -121,20 +95,42 @@ body{
   letter-spacing: 1px;
   margin: 10px 0px;
 }
-.footer {
+
+footer {
   background-color: #AB88FF;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   height: 100px;
   width: 100%;
 }
-.footer a {
+
+footer a {
   color: white;
   cursor: pointer;
   font-size: 14px;
   padding-left: 30px;
   text-decoration: none;  
 }
-.footer a:hover {
+
+footer a:hover {
   text-decoration: underline; 
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+@media only screen and (max-width: 600px){
+  .login__container{
+      background-color: transparent;
+      border: none;
+      padding: 0px;
+      width: 100%;
+  }
+/* Esto posicionara el footer en columnas por ende una frase usara todo el espacio de recuadro y el siguiente frase como se iran ordenando en base a columnas se iran dejando abajo uno debajo del otro */
+  /* footer{
+    align-items: flex-start;
+    flex-direction: column;
+  } */
 }
