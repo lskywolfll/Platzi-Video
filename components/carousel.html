@@ -63,7 +63,8 @@
 
     .carousel-item__details{
         /* posicion desde donde comienza, profundidad de color inicial con su transpariencia y el porcentaje de uso, color total con el 100% para llegar al color completo definitivo */
-        background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 100%);
+        /* Recordar que en transparencia el 1 es completo sin transparencia y el 0 con transparencia */
+        background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 100%);
         font-size: 10px;
         opacity: 0;
         /* opacity,  no se aparecera el cambio de la profundiad del gradiente tan al instante sino que con un tiempito para ser notorio el cambio*/
@@ -75,6 +76,9 @@
         right: 0;
         bottom: 0;
     }
+
+    /* Detallitos completados con una ayudita de: Raul Borda de platzi :3, la comunidad unidad es lo mas poderoso que puede haber siempre y cuando se haga de forma potenciadora e humildad*/
+    /* Solo fue en el parrafo,imagen y los 2 titulos */
 
     .carousel-item__details:hover{
         opacity: 1;
@@ -98,7 +102,7 @@
         color: white;
         font-size: 15px;
     }
-    /* Ordenamiento bonito de los botoncitos de agregar y dar play, el titulo y el subtitulo :3 */
+    /* Ordenamiento bonito de los botoncitos de agregar y dar play, el titulo y el subtitulo :3*/
     .carousel-item__details{
         display: flex;
         flex-direction: column;
@@ -122,7 +126,7 @@
                         <img src="../img/icons8-añadir.svg" alt="Plus">
                     </div>
                     <p class="carousel-item__details--title">Titulo descriptivo</p>
-                    <p class="carousel-item__details--subtitle">2019 1+ 114 minutos</p>
+                    <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
                 </div>
             </div>
             <div class="carousel-item">

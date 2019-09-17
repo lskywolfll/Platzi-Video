@@ -1,5 +1,132 @@
-.body{
+body{
     margin: 0px;
+    font-family: 'Muli', sans-serif;
+    background: #8f57fd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header{
+    align-items: center;
+    background-color: #8f57fd;
+    color: white;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    top: 0px;
+    width: 100%;
+}
+
+.header__img {
+  margin-left: 30px;
+  width: 200px;
+}
+
+.header__menu {
+	margin-right: 30px;
+}
+
+.header__menu ul {
+  display: none;
+  list-style: none;
+  margin: 0px 0px 0px -14px;
+  padding: 0px;
+  position: absolute;
+  width: 100px;
+  text-align: right;
+}
+
+.header__menu:hover ul, ul:hover {
+	display: block;
+}
+
+.header__menu li {
+  margin: 10px 0px;
+}
+
+.header__menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.header__menu li a:hover {
+  text-decoration: underline;
+}
+
+.header__menu--profile {
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.header__menu--profile img {
+  margin-right: 8px;
+  width: 40px;
+}
+
+.navegacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 300px;
+  border-radius: 0px 0px 40px 40px;
+}
+
+.navegacion__title {
+  color: white;
+  font-size: 25px;
+}
+
+.categories__title {
+  background: #8f57fd;
+  color: white;
+  font-size: 16px;
+  margin-top: -16px;
+  position: absolute;
+  padding-left: 30px;
+  width: 100%;
+}
+
+.input {
+  background-color: rgba(255,255,255,0.1);
+  border: 2px solid white;
+  border-radius: 25px;
+  color: white;
+  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  height: 50px;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 0px 20px;
+  width: 70%;
+}
+
+::placeholder {
+  color: white;
+}
+
+footer {
+  background-color: #AB88FF;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  width: 100%;
+}
+
+footer a {
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding-left: 30px;
+  text-decoration: none;  
+}
+
+footer a:hover {
+  text-decoration: underline; 
 }
 
 .carousel{
@@ -15,7 +142,7 @@
     padding-bottom: 10px;
 }
 
-.carousel__item{
+.carousel-item{
     background-color: blue;
     width: 200px;
     height: 250px;
@@ -29,22 +156,91 @@
     transition: 250ms all;
     /* para que no sea demaciado grande y empieze desde la izquieda en adelante para transofrmarlos */
     transform-origin: center left;
+    position: relative;
 }
 
-.carousel__item:hover ~ .carousel__item{
+.carousel-item:hover ~ .carousel-item{
     transform: translate3d(100px, 0, 0);
+    -webkit-transform: translate3d(100px, 0, 0);
 }
 
-.carousel__container:hover .carousel__item{
+.carousel__container:hover .carousel-item{
     opacity: 0.3;
 }
 
-.carousel__container:hover .carousel__item:hover{
+.carousel__container:hover .carousel-item:hover{
     /* aumenta el tamaño, las imagenes por lo general estan en 1 y la aumentamos un 50% */
     transform: scale(1.5);
     opacity: 1;
 }
 
+.carousel-item__img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.carousel-item__details{
+    /* posicion desde donde comienza, profundidad de color inicial con su transpariencia y el porcentaje de uso, color total con el 100% para llegar al color completo definitivo */
+    /* Recordar que en transparencia el 1 es completo sin transparencia y el 0 con transparencia */
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 100%);
+    font-size: 10px;
+    opacity: 0;
+    /* opacity,  no se aparecera el cambio de la profundiad del gradiente tan al instante sino que con un tiempito para ser notorio el cambio*/
+    transition: 250ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Detallitos completados con una ayudita de: Raul Borda de platzi :3, la comunidad unidad es lo mas poderoso que puede haber siempre y cuando se haga de forma potenciadora e humildad*/
+/* Solo fue en el parrafo,imagen y los 2 titulos */
+
+.carousel-item__details:hover{
+    opacity: 1;
+}
+
+.carousel-item__details p{
+    margin: 2px 0px;
+}
+
+.carousel-item__details img{
+    height: 20px;
+    width: 20px;
+}
+
+.carousel-item__details--title{
+    color: white;
+    font-size: 15px;
+}
+
+.carousel-item__details--subtitle{
+    color: white;
+    font-size: 15px;
+}
+/* Ordenamiento bonito de los botoncitos de agregar y dar play, el titulo y el subtitulo :3*/
+.carousel-item__details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    /* justify-content: space-around; */
+}
+
 ::-webkit-scrollbar{
     display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .main__description--title {
+    font-size: 30px;
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
