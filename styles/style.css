@@ -131,7 +131,7 @@ footer a:hover {
 
 .carousel {
   width: 100%;
-  overflow: scroll;
+  overflow: hidden;
   padding: 30px;
   position: relative;
 }
@@ -153,7 +153,7 @@ footer a:hover {
   /* pointer para que aparesca una manito que pasara algo cuando haga click */
   cursor: pointer;
   /* un tiempo establecido y cuantos elementos queremos que lo tengan para la hora de estar sobre el area indicada */
-  transition: 250ms all;
+  transition: 450ms all;
   /* para que no sea demaciado grande y empieze desde la izquieda en adelante para transofrmarlos */
   transform-origin: center left;
   position: relative;
@@ -187,7 +187,7 @@ footer a:hover {
   font-size: 10px;
   opacity: 0;
   /* opacity,  no se aparecera el cambio de la profundiad del gradiente tan al instante sino que con un tiempito para ser notorio el cambio*/
-  transition: 250ms opacity;
+  transition: 450ms opacity;
   padding: 10px;
   position: absolute;
   top: 0;
