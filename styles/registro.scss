@@ -1,17 +1,30 @@
-body{
-    margin: 0;
-    font-family: 'Muli', sans-serif;
+$verde: #21c08b;
+$moradoSuave: #ab88ff;
+$blanco: white;
+
+body {
+  margin: 0;
+  font-family: "Muli", sans-serif;
+}
+// Mixins
+@mixin flex__align--center {
+  display: flex;
+  align-items: center;
 }
 
-.header{
-    align-items: center;
-    background-color: #21c08b;
-    color: white;
-    display: flex;
-    height: 100px;
-    justify-content: space-between;
-    top: 0px;
-    width: 100%;
+@mixin flex__direction--column {
+  display: flex;
+  flex-direction: column;
+}
+// End Mixins
+.header {
+  @include flex__align--center;
+  background-color: $verde;
+  color: $blanco;
+  height: 100px;
+  justify-content: space-between;
+  top: 0px;
+  width: 100%;
 }
 
 .header__img {
@@ -19,47 +32,44 @@ body{
   width: 200px;
 }
 
-.registro{
-    background: linear-gradient(#21C08B, #AB88FF);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0px 30px;
-    /* view height, el porcentaje que ve el usuario */
-    min-height: calc(100vh - 200px);
+.registro {
+  @include flex__align--center;
+  background: linear-gradient($verde, $moradoSuave);
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 30px;
+  /* view height, el porcentaje que ve el usuario */
+  min-height: calc(100vh - 200px);
 }
 
 .registro__container {
+  @include flex__direction--column;
   background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid white;
+  border: 2px solid $blanco;
   border-radius: 40px;
-  color: white;
+  color: $blanco;
   padding: 60px 68px 40px;
   /* Tamaño completo del recuadro donde se iniciara sesion */
   min-height: 700px;
   width: 300px;
-  display: flex;
   justify-content: space-around;
-  flex-direction: column;
 }
 
-.registro__container--form{
-    display: flex;
-    flex-direction: column;
+.registro__container--form {
+  @include flex__direction--column;
 }
 
-.registro__container--form label{
-    font-size: 14px;
+.registro__container--form label {
+  font-size: 14px;
 }
 
 .registro__container--login {
   font-size: 17px;
 }
 .registro__container--login a {
-  color: white;
+  color: $blanco;
   font-weight: bold;
-  font-size: 16px;  
+  font-size: 16px;
   text-decoration: none;
   margin-left: 15px;
 }
@@ -71,64 +81,63 @@ body{
   border-left: 0px;
   border-top: 0px;
   border-right: 0px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid $blanco;
   font-size: 16px;
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
   margin-bottom: 20px;
   padding: 0px 20px;
   outline: none;
   height: 50px;
 }
 ::placeholder {
-  color: white;
+  color: $blanco;
 }
 .button {
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
   border-radius: 25px;
-  color: white;
+  color: $blanco;
   cursor: pointer;
-  font-size: 16px;  
-  font-weight: bold; 
-  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Muli", sans-serif;
   height: 50px;
   letter-spacing: 1px;
   margin: 10px 0px;
 }
 
 footer {
-  background-color: #AB88FF;
-  display: flex;
-  align-items: center;
+  @include flex__align--center;
+  background-color: $moradoSuave;
   justify-content: space-around;
   height: 100px;
   width: 100%;
 }
 
 footer a {
-  color: white;
+  color: $blanco;
   cursor: pointer;
   font-size: 14px;
   padding-left: 30px;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 footer a:hover {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
-@media only screen and (max-width: 600px){
-  .login__container{
-      background-color: transparent;
-      border: none;
-      padding: 0px;
-      width: 100%;
+@media only screen and (max-width: 600px) {
+  .login__container {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    width: 100%;
   }
-/* Esto posicionara el footer en columnas por ende una frase usara todo el espacio de recuadro y el siguiente frase como se iran ordenando en base a columnas se iran dejando abajo uno debajo del otro */
+  /* Esto posicionara el footer en columnas por ende una frase usara todo el espacio de recuadro y el siguiente frase como se iran ordenando en base a columnas se iran dejando abajo uno debajo del otro */
   /* footer{
     align-items: flex-start;
     flex-direction: column;
