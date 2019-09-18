@@ -1,17 +1,23 @@
-body{
-    margin: 0;
-    font-family: 'Muli', sans-serif;
+$blanco: white;
+
+body {
+  margin: 0;
+  font-family: "Muli", sans-serif;
 }
 
-.header{
-    align-items: center;
-    background-color: #21c08b;
-    color: white;
-    display: flex;
-    height: 100px;
-    justify-content: space-between;
-    top: 0px;
-    width: 100%;
+@mixin flex{
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  @include flex;
+  background-color: #21c08b;
+  color: $blanco;
+  height: 100px;
+  justify-content: space-between;
+  top: 0px;
+  width: 100%;
 }
 
 .header__img {
@@ -19,22 +25,21 @@ body{
   width: 200px;
 }
 
-.login{
-    background: linear-gradient(#21C08B, #AB88FF);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0px 30px;
-    /* view height, el porcentaje que ve el usuario */
-    min-height: calc(100vh - 200px);
+.login {
+  @include flex;
+  background: linear-gradient(#21c08b, #ab88ff);
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 30px;
+  /* view height, el porcentaje que ve el usuario */
+  min-height: calc(100vh - 200px);
 }
 
 .login__container {
   background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid white;
+  border: 2px solid $blanco;
   border-radius: 40px;
-  color: white;
+  color: $blanco;
   padding: 60px 68px 40px;
   /* Tamaño completo del recuadro donde se iniciara sesion */
   min-height: 620px;
@@ -44,38 +49,37 @@ body{
   flex-direction: column;
 }
 
-.login__container--form{
-    display: flex;
-    flex-direction: column;
+.login__container--form {
+  display: flex;
+  flex-direction: column;
 }
 
-.login__container--form label{
-    font-size: 14px;
+.login__container--form label {
+  font-size: 14px;
 }
 
-.login__container--rember-pass{
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+.login__container--rember-pass {
+  color: $blanco;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
-.login__container--remember-pass a{
-    color: white;
-    font-size: 14px;
-    text-decoration: none;
-    margin-left: 19%;
+.login__container--remember-pass a {
+  color: $blanco;
+  font-size: 14px;
+  text-decoration: none;
+  margin-left: 19%;
 }
 
-.login__container--remember-pass a:hover{
-    text-decoration: underline;
+.login__container--remember-pass a:hover {
+  text-decoration: underline;
 }
 /* > tomar o dar a el diseño en este ejemplo atodos los divs que esten en la seccion de social media */
-.login__container--social-media > div{
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    margin-bottom: 10px;
+.login__container--social-media > div {
+  @include flex;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .login__container--social-media > div > img {
@@ -83,83 +87,93 @@ body{
   margin-right: 10px;
 }
 .login__container--register {
-  font-size: 14px;  
+  font-size: 14px;
+
+  a {
+    color: $blanco;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 15px;
+  }
 }
-.login__container--register a {
-  color: white;
-  font-weight: bold;
-  font-size: 16px;  
-  text-decoration: none;
-  margin-left: 15px;
-}
+// .login__container--register a {
+//   color: $blanco;
+//   font-weight: bold;
+//   font-size: 16px;
+//   text-decoration: none;
+//   margin-left: 15px;
+// }
 .login__container--register a:hover {
   text-decoration: underline;
 }
+
 .input {
   background-color: transparent;
   border-left: 0px;
   border-top: 0px;
   border-right: 0px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid $blanco;
   font-size: 16px;
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
   margin-bottom: 20px;
   padding: 0px 20px;
   outline: none;
   height: 50px;
 }
+
 ::placeholder {
-  color: white;
+  color: $blanco;
 }
+
 .button {
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
   border-radius: 25px;
-  color: white;
+  color: $blanco;
   cursor: pointer;
-  font-size: 16px;  
-  font-weight: bold; 
-  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Muli", sans-serif;
   height: 50px;
   letter-spacing: 1px;
   margin: 10px 0px;
 }
 
 footer {
-  background-color: #AB88FF;
-  display: flex;
-  align-items: center;
+  @include flex;
+  background-color: #ab88ff;
   justify-content: space-around;
   height: 100px;
   width: 100%;
 }
 
 footer a {
-  color: white;
+  color: $blanco;
   cursor: pointer;
   font-size: 14px;
   padding-left: 30px;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 footer a:hover {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
 /* Dispositivos Moviles */
 
-@media only screen and (max-width: 600px){
-  .login__container{
-      background-color: transparent;
-      border: none;
-      padding: 0px;
-      width: 100%;
+@media only screen and (max-width: 600px) {
+  .login__container {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    width: 100%;
   }
-/* Esto posicionara el footer en columnas por ende una frase usara todo el espacio de recuadro y el siguiente frase como se iran ordenando en base a columnas se iran dejando abajo uno debajo del otro */
+  /* Esto posicionara el footer en columnas por ende una frase usara todo el espacio de recuadro y el siguiente frase como se iran ordenando en base a columnas se iran dejando abajo uno debajo del otro */
   /* footer{
     align-items: flex-start;
     flex-direction: column;

@@ -1,18 +1,17 @@
-@charset "UTF-8";
-body {
-  margin: 0;
-  font-family: "Muli", sans-serif;
+body{
+    margin: 0;
+    font-family: 'Muli', sans-serif;
 }
 
-.header {
-  align-items: center;
-  background-color: #21c08b;
-  color: white;
-  display: flex;
-  height: 100px;
-  justify-content: space-between;
-  top: 0px;
-  width: 100%;
+.header{
+    align-items: center;
+    background-color: #21c08b;
+    color: white;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    top: 0px;
+    width: 100%;
 }
 
 .header__img {
@@ -20,15 +19,15 @@ body {
   width: 200px;
 }
 
-.registro {
-  background: linear-gradient(#21C08B, #AB88FF);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0px 30px;
-  /* view height, el porcentaje que ve el usuario */
-  min-height: calc(100vh - 200px);
+.registro{
+    background: linear-gradient(#21C08B, #AB88FF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    /* view height, el porcentaje que ve el usuario */
+    min-height: calc(100vh - 200px);
 }
 
 .registro__container {
@@ -45,31 +44,28 @@ body {
   flex-direction: column;
 }
 
-.registro__container--form {
-  display: flex;
-  flex-direction: column;
+.registro__container--form{
+    display: flex;
+    flex-direction: column;
 }
 
-.registro__container--form label {
-  font-size: 14px;
+.registro__container--form label{
+    font-size: 14px;
 }
 
 .registro__container--login {
   font-size: 17px;
 }
-
 .registro__container--login a {
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 16px;  
   text-decoration: none;
   margin-left: 15px;
 }
-
 .registro__container--login a:hover {
   text-decoration: underline;
 }
-
 .input {
   background-color: transparent;
   border-left: 0px;
@@ -77,26 +73,24 @@ body {
   border-right: 0px;
   border-bottom: 2px solid white;
   font-size: 16px;
-  font-family: "Muli", sans-serif;
+  font-family: 'Muli', sans-serif;
   margin-bottom: 20px;
   padding: 0px 20px;
   outline: none;
   height: 50px;
 }
-
 ::placeholder {
   color: white;
 }
-
 .button {
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
   border-radius: 25px;
   color: white;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  font-family: "Muli", sans-serif;
+  font-size: 16px;  
+  font-weight: bold; 
+  font-family: 'Muli', sans-serif;
   height: 50px;
   letter-spacing: 1px;
   margin: 10px 0px;
@@ -116,30 +110,27 @@ footer a {
   cursor: pointer;
   font-size: 14px;
   padding-left: 30px;
-  text-decoration: none;
+  text-decoration: none;  
 }
 
 footer a:hover {
-  text-decoration: underline;
+  text-decoration: underline; 
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar{
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
-  .login__container {
-    background-color: transparent;
-    border: none;
-    padding: 0px;
-    width: 100%;
+@media only screen and (max-width: 600px){
+  .login__container{
+      background-color: transparent;
+      border: none;
+      padding: 0px;
+      width: 100%;
   }
-
-  /* Esto posicionara el footer en columnas por ende una frase usara todo el espacio de recuadro y el siguiente frase como se iran ordenando en base a columnas se iran dejando abajo uno debajo del otro */
+/* Esto posicionara el footer en columnas por ende una frase usara todo el espacio de recuadro y el siguiente frase como se iran ordenando en base a columnas se iran dejando abajo uno debajo del otro */
   /* footer{
     align-items: flex-start;
     flex-direction: column;
   } */
 }
-
-/*# sourceMappingURL=registro.css.map */

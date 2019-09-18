@@ -5,10 +5,10 @@ body {
 }
 
 .header {
+  display: flex;
   align-items: center;
   background-color: #21c08b;
   color: white;
-  display: flex;
   height: 100px;
   justify-content: space-between;
   top: 0px;
@@ -21,9 +21,9 @@ body {
 }
 
 .login {
-  background: linear-gradient(#21C08B, #AB88FF);
   display: flex;
   align-items: center;
+  background: linear-gradient(#21c08b, #ab88ff);
   justify-content: center;
   flex-direction: column;
   padding: 0px 30px;
@@ -88,7 +88,6 @@ body {
 .login__container--register {
   font-size: 14px;
 }
-
 .login__container--register a {
   color: white;
   font-weight: bold;
@@ -134,9 +133,9 @@ body {
 }
 
 footer {
-  background-color: #AB88FF;
   display: flex;
   align-items: center;
+  background-color: #ab88ff;
   justify-content: space-around;
   height: 100px;
   width: 100%;
